@@ -1,0 +1,377 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "Microsoft YaHei";
+	width: 100%;
+	height: 100%;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+/*header的css设置*/
+.head{
+	display: none;
+
+	width: 100%;
+	height: 3.5rem;
+
+	background-color: #8ed498;
+	text-align: center;
+	line-height: 3.5rem;
+	overflow: hidden;
+	z-index: 5;
+}
+.head i{
+	font-size: 2.5rem;
+	line-height: 3.5rem;
+	color: #fff;
+}
+.head .icon-menu{
+	float: left;
+}
+.head .icon-cancel{
+	float: left;
+}
+.head .icon-pencil{
+	float: right;
+}
+.head span{
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+/*编辑页面的header的css设置*/
+.edit-head{
+	width: 100%;
+	height: 3.5rem;
+
+	text-align: center;
+
+	background-color: #eee;
+	overflow: hidden;
+}
+.edit-head i{
+	font-size: 2.5rem;
+	float: left;
+	line-height: 3.5rem;
+}
+.edit-head span{
+	line-height: 3.5rem;
+	font-weight: bold;
+}
+.edit-head .commit{
+	display: inline-block;
+	float: right;
+	width: 3.5rem;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	color: #fff;
+	border-radius: 0.5rem;
+	margin: 0.5rem;
+	background-color: #22F56A;
+	cursor: pointer;
+}
+
+
+/*下面是编辑页面内容的css设置*/
+/*中间部分的设置*/
+.edit-content{
+	margin: 0 1rem;
+}
+.edit-content li>div{
+	font-size: 0.8rem;
+	text-align: center;
+	color: #9a9a9a;
+	float: left;
+	margin: 0.8rem 1.5rem 0.5rem 0.5rem;
+}
+.edit-content li{
+	overflow: hidden;
+	height: 5rem;
+	border-bottom: 1px solid #d8d8d8;
+}
+.edit-content i{
+	display: inline-block;
+	width: 2.8rem;
+	height: 2.8rem;
+	font-size: 2.0rem;
+	line-height: 2.8rem;
+	text-align: center;
+	border-radius: 2.8rem;
+	color: #fff;
+	cursor: pointer;
+}
+
+/*footer部分的设置*/
+.footer{
+	display: none;
+	height: 4rem;
+	background-color: #eee;
+	position: absolute;
+	bottom: 0rem;
+	right: 0rem;
+	left: 0rem;
+	overflow: hidden;
+}
+#choice{
+	width: 9rem;
+	height: 4rem;
+	line-height: 4rem;
+	float: left;
+}
+#choice i{
+	display: inline-block;
+	width: 2.8rem;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	font-size: 2.0rem;
+	border-radius: 2.8rem;
+	margin: 0.6rem 0.6rem;
+}
+#choice span{
+	font-size: 1.3rem;
+}
+.input_num{
+	float: right;
+	width: 10rem;
+	height: 2.8rem;
+	line-height: 2.8rem;
+	text-align: center;
+	margin: 0.4rem 0.4rem 0rem 0rem;
+}
+.input_num i{
+	display: inline-block;
+	margin-top: 0.2rem;
+	font-size: 1.7rem;
+}
+.input_num input{
+	width: 4rem;
+	height: 2.0rem;
+	border: 1px solid #ccc;
+	font-size: 1.5rem;
+}
+
+
+
+
+/*下面这一部分是账目列表的div内容*/
+.list-content{
+	display: none;
+}
+/*点击menu才会出来的ul*/
+.menu{
+	/* height: 3.2rem; */
+	line-height: 3.2rem;
+
+	background-color: rgba(141,211,151,0.7);
+	padding: 0rem 1.2rem;
+	
+	overflow: hidden;
+
+	-webkit-transition: height 0.3s ease 0s;
+	-moz-transition: height 0.3s ease 0s;
+	-ms-transition: height 0.3s ease 0s;
+	-o-transition: height 0.3s ease 0s;
+	transition: height 0.3s ease 0s;
+}
+.menu li{
+	float: left;
+	margin: 0rem 1rem;
+	color: #cfebd3;
+	cursor: pointer;
+}
+.menu .active{
+	color: #fff;
+}
+
+
+/*中间的账目列表内容css设置*/
+.bill-list{
+	overflow: hidden;
+	width: 100%;
+}
+.bill-list li:nth-child(2n+1){
+	background-color: #fbfbfb;
+}
+.bill-list li{
+	width: 200%;
+	position: relative;/*这里增加一个相对定位可能是为了之后要删除这一项时移动用到的 猜测*/
+	left: 0rem;
+	overflow: hidden;
+	
+	color: #646464;
+	border-bottom: 1px dashed #eee;
+} 
+.list-item{
+	position: relative;
+	float: left;
+	padding: 1rem 0rem;
+	margin-left: 1rem;
+	width: 50%;/*这里是50%的原因是上面的li是宽度是整个屏幕宽度的2倍 取一半正好是整个屏幕的宽度*/
+}
+.list-item div:nth-child(1)
+/*让所有的list-item下的第一个div元素都是行内块元素*/
+{
+	display: inline-block;
+}
+.list-item i{
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	line-height: 2.4rem;
+	text-align: center;
+	font-size: 1.5rem;
+	border-radius: 2.5rem;
+	margin-right: 1rem;
+}
+.bill-list span{
+	/* display: inline-block; */
+	font-size: 1.2rem;
+	margin-right: 1rem;
+}
+/*支出都是这个颜色*/
+.spending-num{
+	color: #db6c63;
+}
+/*收入都是这个颜色*/
+.income-num{
+	color: #7fd2a9;
+}
+.date{
+	position: absolute;
+	right: 2rem;
+	top: 1rem;
+	font-size: 0.7rem;
+	color: #afafaf;
+}
+
+/*删除条目*/
+.edit-item{
+	position: relative;
+	float: left;
+	box-sizing: border-box;
+	width: 50%;
+	margin-left: -1rem;
+	color: #fff;
+	border-bottom: 1px dashed #a6baa9;
+	background-color: #d74c3d;
+}
+.edit-item i{
+	font-size: 1.8rem;
+	line-height: 4.4rem;
+	display: inline-block;
+	width: 4.4rem;
+	cursor: pointer;
+	text-align: center;
+}
+
+
+
+
+/*下面这一部分是账目图表的div内容*/
+.graph-content{
+	display: none;
+
+	margin: 0rem 0.5rem 1rem 0.5rem;
+	border: 1px solid #ccc;
+	box-shadow: 0px 0px 5px #ccc;
+}
+.total-list{
+	overflow: hidden;/*因为下面的li要float所以父元素要设置overflow*/
+	width: 100%;
+	height: 3rem;
+	border-bottom: 1px solid #ccc;
+	padding: 1.2rem 0rem;
+}
+.total-list li{
+	float: left;
+	width: 33%;
+	height: 3rem;
+	text-align: center;
+	border-right: 1px solid #ccc;
+}
+.total-list li:nth-child(3)
+{
+	border-right:0px none;
+}
+.all-income{
+	color: #7fd2a9;
+}
+.all-spending{
+	color: #db6c63;
+}
+.all-remaining{
+	color: #000;
+}
+
+.pie-chart{
+	overflow: hidden;
+	height: 12rem;
+	padding: 0.5rem 1rem;
+}
+.col-left{
+	float: left;
+	width: 50%;
+}
+.pie-title{
+	font-size: 1.2rem;
+}
+.pie-content{
+	height: 12rem;
+}
+.pie-content li{
+	width: 50%;
+	float: left;
+	padding: 0.5rem 0rem;
+	text-align: center;
+	height: 2.5rem;
+}
+.pie-content span{
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 0.5rem;
+	display: inline-block;
+	margin-right: 0.5rem;
+}
+.clothes-color{
+	background-color: #f39f61;
+}
+.traffic-color
+{
+	background-color: #6fb2de;
+}
+.eat-color{
+	background-color: #fe8988;
+}
+.shopping-color{
+	background-color: #da5a4c;
+}
+.hotel-color{
+	background-color: #c6b29c;
+}
+.other-color{
+	background-color: #fdc430;
+}
+.col-right{
+	float: left;
+	width: 50%;
+	height: 12rem;
+}
+
+/*折线图*/
+.line-chart{
+	width: 100%;
+	height: 14rem;
+}
+
+
+
+
+
+
