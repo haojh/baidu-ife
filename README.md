@@ -12,5 +12,12 @@
 
 ###task1[移动端]
 
-* 任务要求：[百度前端学院夏季移动班任务一](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/mob_qihang_01.md)
+* 任务要求：[百度前端学院夏季移动起航班任务一](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/mob_qihang_01.md)
 * 在线demo：[MyDemo](http://newql.github.io/baidu-ife/task1_summer/)
+
+##baidu-ife-summer
+
+###task1 杨帆班[移动端]
+
+* 任务要求：[百度前端学院夏季移动杨帆班任务一](https://github.com/baidu-ife/ife/blob/master/2015_summer/task/mob_yangfan_01.md)
+* 在线demo：[MyDemo](http://newql.github.io/baidu-ife/mobile_yangfan/)
