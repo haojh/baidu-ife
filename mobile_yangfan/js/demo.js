@@ -273,7 +273,7 @@ function addBill()
 			};
 
 			var storage = window.localStorage;
-			var billItem = JSON.parse(storage.getItem("billItem")) || { };
+			var billItem = JSON.parse(storage.getItem("billItem")) || [];
 	        var billMoney = JSON.parse(storage.getItem("billMoney")) || {
 	            "income":0,//总收入
 				'spending':0,//所有花费
