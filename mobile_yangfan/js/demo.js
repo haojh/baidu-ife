@@ -144,7 +144,7 @@ function showEditList(){
 //初始化账目条目
 function initBillList()
 {
-
+	var storage = window.localStorage;
 	//获取到billItem
 	var billItem=JSON.parse(storage.getItem("billItem")) || undefined;
 	//这里判断十分重要 如果billItem中没有值即还未开始记账的时候，不用初始化账目条目
