@@ -144,13 +144,16 @@ function showEditList(){
 //初始化账目条目
 function initBillList()
 {
+	var storage = window.localStorage;
 	//获取到billItem
-	var billItem=JSON.parse(localStorage.billItem);
+	var billItem=JSON.parse(storage.getItem("billItem")) || undefined;
 	//这里判断十分重要 如果billItem中没有值即还未开始记账的时候，不用初始化账目条目
 	if(billItem.length==0)
 	{
-		return ;
+		return false;
 	}
+
+	$(".bill-list").empty();
 	//console.log(billItem);
 	var lihtml='';
 	var str="";
@@ -258,7 +261,7 @@ function addBill()
 		else
 		{
 			
-			var billItemText=[];
+		/*	var billItemText=[];
 			var billMoneyText={
 				"income":0,//总收入
 				'spending':0,//所有花费
@@ -270,10 +273,9 @@ function addBill()
 					'icon-basket':0,//购物花费
 					'icon-dollar':0//其他花费
 				}
-			};
+			};*/
 
 			var storage = window.localStorage;
-			
 			var billItem = JSON.parse(storage.getItem("billItem")) || [];
 	        var billMoney = JSON.parse(storage.getItem("billMoney")) || {
 	            "income":0,//总收入
